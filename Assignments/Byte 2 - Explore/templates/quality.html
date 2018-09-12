@@ -46,27 +46,30 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Quality: About This Data Set</h1>
-        <p>Write a brief summary about the quality of the data set here</a></p>
+        <p>This dataset consists of the performance of 526 football players in season 15-16. Besides personal information: players' name, value and their team, main data is matrics of their performance, including appearance and 
+        substitution time, number of goals, number of penalties they miss, number of red and yellow card they get, etc. THere are also some data that only owned bt defender of GK player like number of goal conceded(GC). Based on
+        performance data, dataset also provides a total points computed based on single performance item and average points computed by Total / Value.</a></p>
       </div>
 
     
       <div class="page-header">
 	<h2>Is the data complete?</h2>
-	<p>If not, what is missing and what concerns does it raise?
-	What is your evidence for this?</p>
+	<h4>Yes, I think this data is complete. As you see, there are some '-' value for CSF(clean full match), CSP(clean part match), GC(goal concede), and PS(panalty save), but they are attibutes that only owned by defender(other 
+	player just do not have such attributes). I just replace them with zero during furthur calculateion with pandas. Also there are some players with all zero performance, maybe it is because they get injured and miss the whole 
+	season, not incomplete data.</h4>
       </div>
       
       <div class="page-header">
 	<h2>Is the data coherent?</h2>
-	<p>Does it make sense relative to itself? Does it match your
-	expectations? Are the distributions sensible? What is your
-	evidence for this?</p>
+	<h4> No, after use pandas to calculate Total points accoring to the way thet given by author of dataset, some total points is not coherent with its single items. It does not match my expectations since these calculation are
+	very easy and should be mistaken. Then I analyze those wrong rows found that most of them are defenders. So I think maybe the formular gives wrong coefficient for items that only for defenders(CSF CSP GC PS). For the differences
+	 between given value and my calculated value, their describe information are as below. As we can see, most differences are zero, but some of them can bigger than 10, which is relatively unacceptable considering the scale of total points.</h4>
       </div>
 
       <div class="page-header">
 	<h2>Is the data correct?</h2>
-	<p>What aspects of this data can you verify? How did you do so? What did
-	you find?</p>
+	<h4>What aspects of this data can you verify? How did you do so? What did
+	you find?</h4>
       </div>
 
     </div> <!-- /container -->
