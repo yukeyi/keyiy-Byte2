@@ -65,11 +65,15 @@
 	very easy and should be mistaken. Then I analyze those wrong rows found that most of them are defenders. So I think maybe the formular gives wrong coefficient for items that only for defenders(CSF CSP GC PS). For the differences
 	 between given value and my calculated value, their describe information are as below. As we can see, most differences are zero, but some of them can bigger than 10, which is relatively unacceptable considering the scale of total points.</h4>
       </div>
-
+      <img src="templates/result.png"   alt="Picture cannot be successfully loaded" />
       <div class="page-header">
 	<h2>Is the data correct?</h2>
-	<h4>What aspects of this data can you verify? How did you do so? What did
-	you find?</h4>
+	<h4> Since those datas are from computer games, players' performance may vary a lot and with big randomness, it is hard to say whether the data is correct. But We can varify the data from some aspects< First I check whether the name of player
+	and the team they belong to is right, these can be easily varified with real-world condition. Then I check whether players' value in game is similar to their value in real world, considering that even game is a simulation of what would happen
+	in real world. For this one, I think it is correct because those top-class player also enjoy high value in this data, like Aguero 7.5m, Costa 7.2m. Finally I do some Quantitative analysis to see whether player's value match their performance 
+	of the season. From the scatter plot below, although not obvious and lots of exception point due to unpredictable of football game, we can see that player with high value usually can gain more points in a season (most player wit value higher with 5m can get a point higher than 75
+	while most 2-3m value player cannot get 50 points). And the distribution of player value is kind of gaussian, which prove both the coherence and correctness of this data.</h4>
+	<img src="templates/plot.png"   alt="Picture cannot be successfully loaded" />
       </div>
 
     </div> <!-- /container -->
